@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import { faker } from '@faker-js/faker';
+import { useAutoAnimate } from '@formkit/auto-animate/react';
 
 type ListItem = {
   name: string;
@@ -17,10 +18,12 @@ function App() {
     ]);
   };
 
+  const [listRef] = useAutoAnimate<HTMLDivElement>();
+
   return (
     <div className="App">
       <button onClick={appendNewItem}>Add Item</button>
-      <div className="list">
+      <div className="list" ref={listRef}>
         {items.map((item) => (
           <div
             key={item.id}

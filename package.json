@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@faker-js/faker": "^7.3.0",
+    "@formkit/auto-animate": "*",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
